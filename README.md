@@ -1,10 +1,10 @@
-# 🌐 Frontend - Angular (Consumo de API de Dependencias)
+# Frontend - Angular (Consumo de API de Dependencias)
 
 Este proyecto de Angular consume una RESTfulAPI desarrollada en Spring Boot con las operaciones basicas de un CRUD:
 
 ---
 
-## 🚀 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - Angular v20
 - TypeScript
@@ -14,14 +14,14 @@ Este proyecto de Angular consume una RESTfulAPI desarrollada en Spring Boot con 
 - Lo mas moderno de la ultima version
 
 ---
-## 🎥 Video demostrativo
+## Video demostrativo
 
 Puedes encontrar una breve explicación del funcionamiento del proyecto en el siguiente video:
 
 [Ver video aqui](https://drive.google.com/file/d/1Qlr3WQ9giRVKr-5C-GcqmmHXwpEW4_Nu/view?usp=sharing)
 ---
 
-## ⚙️ Configuración del Proyecto
+## Configuración del Proyecto
 ### Abre una terminal
 ### Clona el repositorio con SSH
 ```
