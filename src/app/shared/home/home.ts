@@ -20,7 +20,7 @@ export class Home {
     {
       title: 'Admins',
       description: 'This is the module for admins.',
-      route: '/dashboard/dependencies/admins',
+      route: '/dashboard/admin/admins',
     },
     {
       title: 'Users',
