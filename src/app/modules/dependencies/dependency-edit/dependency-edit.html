@@ -1,0 +1,99 @@
+<mat-card>
+  <div class="mymargin">
+    <button
+      matTooltip="Cerrar"
+      type="button"
+      mat-icon-button
+      (click)="closeModal()"
+      tabindex="-1"
+    >
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </div>
+
+  <mat-card-content>
+    <mat-card-title> Actualizar dependencia </mat-card-title>
+    <br />
+    <form [formGroup]="dependencyForm" (ngSubmit)="onSubmit()">
+      <div class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="name" />
+          @if(dependencyForm.controls['name'].errors?.['required']){
+          <mat-error>El campo es requerido.</mat-error>
+          } @else if(dependencyForm.controls['name'].errors?.['minlength']){
+          <mat-error>Minimo 3 caracteres.</mat-error>
+          }@else if(dependencyForm.controls['name'].errors?.['maxlength']){
+          <mat-error>Maximo 100 caracteres.</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Dirección</mat-label>
+          <textarea
+            matInput
+            formControlName="address"
+            rows="4"
+            placeholder="Ex. Avenida Universidad #45"
+          ></textarea>
+          @if(dependencyForm.controls['address'].errors?.['required']){
+          <mat-error>El campo es requerido.</mat-error>
+          } @else if(dependencyForm.controls['address'].errors?.['minlength']){
+          <mat-error>Minimo 3 caracteres.</mat-error>
+          }@else if(dependencyForm.controls['address'].errors?.['maxlength']){
+          <mat-error>Maximo 100 caracteres.</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Telefono</mat-label>
+          <input
+            matInput
+            type="tel"
+            formControlName="telephone"
+            #telephoneInput
+            placeholder="Ex. 9511236734"
+          />
+          <span matSuffix class="digit-counter">
+            {{ dependencyForm.get("telephone")?.value?.length || 0 }} / 10
+          </span>
+
+          @if(dependencyForm.controls['telephone'].errors?.['required']){
+          <mat-error>El campo es requerido.</mat-error>
+          } @else if (
+          dependencyForm.controls['telephone'].errors?.['minlength'] ||
+          dependencyForm.controls['telephone'].errors?.['maxlength'] ) {
+          <mat-error>Debe tener exactamente 10 digitos.</mat-error>
+          }@else if (dependencyForm.controls['telephone'].errors?.['pattern']) {
+          <mat-error>Solo se permiten números.</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Correo</mat-label>
+          <input type="email" matInput formControlName="email" />
+          @if(dependencyForm.controls['email'].errors?.['required']){
+          <mat-error>El campo es requerido.</mat-error>
+          }@else if(dependencyForm.controls['email'].errors?.['maxlength']){
+          <mat-error>Maximo 50 caracteres.</mat-error>
+          }@else if(dependencyForm.controls['email'].errors?.['email']){
+          <mat-error>Formato de correo invalido.</mat-error>
+          }
+        </mat-form-field>
+      </div>
+      <mat-card-subtitle>
+        <mat-list-item>* Todos los campos son obligatorios.</mat-list-item>
+      </mat-card-subtitle>
+      <div class="example-section">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+        >
+          <mat-icon>update</mat-icon>
+          Actualizar Informacion
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

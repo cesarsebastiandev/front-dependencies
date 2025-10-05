@@ -1,0 +1,122 @@
+table.mat-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.example-container {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  overflow: auto;
+  margin: 0 0.3%;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.flex-item {
+  margin-right: 5px;
+}
+
+.mat-column-id {
+  width: 60px;
+  min-width: 50px;
+  max-width: 70px;
+  text-align: center;
+}
+
+.mat-column-name {
+  min-width: 180px;
+  max-width: 300px;
+}
+
+.mat-column-address {
+  min-width: 220px;
+  max-width: 350px;
+}
+
+.mat-column-telephone {
+  width: 120px;
+  min-width: 100px;
+}
+
+.mat-column-email {
+  min-width: 180px;
+  max-width: 280px;
+}
+
+.mat-column-is_active {
+  width: 90px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.mat-column-created_at,
+.mat-column-updated_at {
+  width: 130px;
+  min-width: 110px;
+  text-align: center;
+}
+
+.mat-cell,
+.mat-header-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mat-row {
+  display: table-row;
+  align-items: initial;
+}
+
+.margin-btns {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.margin-searcher {
+  margin-bottom: 15px;
+}
+
+.status-active {
+  color: #256029;
+  background-color: #d9fdd3;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.status-inactive {
+  color: #842029;
+  background-color: #f8d7da;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.mat-column-is_active .status-active,
+.mat-column-is_active .status-inactive {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  display: inline-block;
+}
+
+.show-text {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  color: #e53935;
+}
